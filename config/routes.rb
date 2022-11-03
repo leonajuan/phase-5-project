@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   resources :ratings, only: [:index, :show, :create]
   resources :musics, only: [:index, :show, :create]
   resources :users
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  post "/login", to: "users#login"
+  get "/profile", to: "users#profile"
+  # include route of patch - example is: patch "/user-name", to: "users#udpate_name"
 end
