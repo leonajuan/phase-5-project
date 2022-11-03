@@ -1,21 +1,25 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import MusicList from "./components/MusicList"
 
 function App() {
-  const [count, setCount] = useState(0);
+
+  const [music, setMusic] = useState([])
 
   useEffect(() => {
-    fetch("/hello")
-      .then((r) => r.json())
-      .then((data) => setCount(data.count));
-  }, []);
+    fetch("/musics")
+      .then(res => res.json())
+      .then(musicData => {
+        setMusic(musicData)
+      })
+  }, [])
 
   return (
     <BrowserRouter>
       <div className="App">
         <Switch>
-          <Route path="/songs">
-            <h1>Songs Route</h1>
+          <Route path="/music">
+            <MusicList music={music} />
           </Route>
           <Route path="/">
             <h1>Home</h1>
