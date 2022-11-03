@@ -1,3 +1,3 @@
 class RatingSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :user_id, :music_id, :rating, :comment
 end
