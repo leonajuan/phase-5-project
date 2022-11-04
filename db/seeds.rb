@@ -4,10 +4,10 @@ Rating.destroy_all
 Message.destroy_all
 
 puts "🌱 Seeding users..."
-u1 = User.create(first_name: "Leona", last_name: "Juan", username: "leona", password: "password123", bio: "as boring in person ♡ nyc", image: "https://www.dropbox.com/s/e9l9vf99v81d50r/leona.JPG?dl=0")
-u2 = User.create(first_name: "Kaylin", last_name: "Virone", username: "kayvirone", password: "mypassword", bio: "www.kaylinvirone.com", image: "https://www.dropbox.com/s/jqtqddms4j2geza/kaylin.png?dl=0")
-u3 = User.create(first_name: "Emily", last_name: "Mendieta", username: "mendieta_em", password: "Passw0rd", bio: "<3", image: "https://www.dropbox.com/s/6cvk2vt496kf3fd/emily.png?dl=0")
-u4 = User.create(first_name: "Evelyn", last_name: "Gervacio", username: "evelyngx", password: "password1!", bio: "🦋🧿🩺", image: "https://www.dropbox.com/s/c06wg5pz6bw41vr/evelyn.png?dl=0")
+u1 = User.create(first_name: "Leona", last_name: "Juan", username: "leona", password: "password123", bio: "as boring in person ♡ nyc", image: "https://flic.kr/p/2nXg7VK")
+u2 = User.create(first_name: "Kaylin", last_name: "Virone", username: "kayvirone", password: "mypassword", bio: "www.kaylinvirone.com", image: "https://flic.kr/p/2nXaHr9")
+u3 = User.create(first_name: "Emily", last_name: "Mendieta", username: "mendieta_em", password: "Passw0rd", bio: "<3", image: "https://flic.kr/p/2nXaHqT")
+u4 = User.create(first_name: "Evelyn", last_name: "Gervacio", username: "evelynngx", password: "password1!", bio: "🦋🧿🩺", image: "https://flic.kr/p/2nXdhFR")
 
 puts "🌱 Seeding music..."
 l1 = Music.create(song_title: "Self Control", artist: "Frank Ocean", album: "Blonde", album_cover: "https://upload.wikimedia.org/wikipedia/en/a/a0/Blonde_-_Frank_Ocean.jpeg")

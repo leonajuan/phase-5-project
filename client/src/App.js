@@ -4,11 +4,12 @@ import Header from "./components/Header"
 import MusicList from "./components/MusicList"
 import LandingPage from "./components/LandingPage"
 import NavBar from "./components/NavBar"
+import UsersList from "./components/UsersList"
 
 function App() {
 
   const [music, setMusic] = useState([])
-  const [userProfile, setUserProfile] = useState([])
+  const [friends, setFriends] = useState([])
   const [user, setUser] = useState({})
   const [filteredUsers, setFilteredUsers] = useState([])
 
@@ -16,7 +17,7 @@ function App() {
     fetch("/users")
       .then(res => res.json())
       .then(userData => {
-        setUserProfile(userData)
+        setFriends(userData)
         setFilteredUsers(userData)
       })
   }, [])
@@ -28,29 +29,6 @@ function App() {
         setMusic(musicData)
       })
   }, [])
-
-  // function handleSignIn(e) {
-  //   e.preventDefault()
-  //   const username = e.target["username"].value
-  //   const password = e.target["password"].value
-  //   fetch("/login", {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //       "Accept": "applcation/json"
-  //     },
-  //     body: JSON.stringify({
-  //       username: username,
-  //       password: password
-  //     })
-  //   })
-  //     .then(res => res.json())
-  //     .then(data => {
-  //       setUser(data.user)
-  //       localStorage.setItem("token", data.token)
-  //       // alert("You're logged in!")
-  //     })
-  // }
 
   function handleSignIn(e) {
     e.preventDefault()
@@ -75,35 +53,35 @@ function App() {
       })
   }
 
-  function handleSignUp(e) {
-    e.preventDefault()
-    const firstName = e.target["first-name"].value
-    const lastName = e.target["last-name"].value
-    const username = e.target["username"].value
-    const bio = e.target["bio"].value
-    const password = e.target["password"].value
-    const image = e.target["image"].value
-    fetch("/users", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        id: userProfile.length + 1,
-        first_name: firstName,
-        last_name: lastName,
-        username: username,
-        bio: bio,
-        password: password,
-        image: image
-      }),
-    })
-      .then(res => res.json())
-      .then(newUser => addNewUser(newUser))
-  }
+  // function handleSignUp(e) {
+  //   e.preventDefault()
+  //   const firstName = e.target["first-name"].value
+  //   const lastName = e.target["last-name"].value
+  //   const username = e.target["username"].value
+  //   const bio = e.target["bio"].value
+  //   const password = e.target["password"].value
+  //   const image = e.target["image"].value
+  //   fetch("/users", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json"
+  //     },
+  //     body: JSON.stringify({
+  //       id: friends.length + 1,
+  //       first_name: firstName,
+  //       last_name: lastName,
+  //       username: username,
+  //       bio: bio,
+  //       password: password,
+  //       image: image
+  //     }),
+  //   })
+  //     .then(res => res.json())
+  //     .then(newUser => addNewUser(newUser))
+  // }
 
   function addNewUser(newUser) {
-    const updatedUsersArray = [...userProfile, newUser]
+    const updatedUsersArray = [...friends, newUser]
     setFilteredUsers(updatedUsersArray)
     alert("Thank you for signing up!")
   }
@@ -118,8 +96,11 @@ function App() {
             <Route path="/music">
               <MusicList music={music} />
             </Route>
+            <Route path="/users">
+              <UsersList friends={friends} />
+            </Route>
             <Route path="/">
-              <LandingPage handleSignIn={handleSignIn} handleSignUp={handleSignUp} />
+              <LandingPage handleSignIn={handleSignIn} addNewUser={addNewUser} friends={friends} />
             </Route>
           </Switch>
         </div>
