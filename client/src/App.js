@@ -29,6 +29,29 @@ function App() {
       })
   }, [])
 
+  // function handleSignIn(e) {
+  //   e.preventDefault()
+  //   const username = e.target["username"].value
+  //   const password = e.target["password"].value
+  //   fetch("/login", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //       "Accept": "applcation/json"
+  //     },
+  //     body: JSON.stringify({
+  //       username: username,
+  //       password: password
+  //     })
+  //   })
+  //     .then(res => res.json())
+  //     .then(data => {
+  //       setUser(data.user)
+  //       localStorage.setItem("token", data.token)
+  //       // alert("You're logged in!")
+  //     })
+  // }
+
   function handleSignIn(e) {
     e.preventDefault()
     const username = e.target["username"].value
@@ -37,7 +60,7 @@ function App() {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Accept": "applcation/json"
+        "Accept": "application/json"
       },
       body: JSON.stringify({
         username: username,
@@ -96,7 +119,6 @@ function App() {
               <MusicList music={music} />
             </Route>
             <Route path="/">
-
               <LandingPage handleSignIn={handleSignIn} handleSignUp={handleSignUp} />
             </Route>
           </Switch>

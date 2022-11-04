@@ -6,12 +6,12 @@ class UsersController < ApplicationController
   end
 
   def login
-    user = User.find_by(username: params[:username]).try(:autheticate, params[:password])
-    if user 
-      token = generate_token(user_id)
-      render json: { user: user, token: token }, status: :ok
+    user = User.find_by(username: params[:username]).try(:authenticate, params[:password])
+    if user
+      token = generate_token(user.id)
+      render json: { user: user, token: token }
     else
-      render json: { error: "Invalid password" }, status: :unauthorized
+      render json: { error: "Invalid Password" }, status: :unauthorized
     end
   end
 

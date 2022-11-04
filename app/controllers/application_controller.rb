@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
   end
 
   def decode_token(token)
-    JWT.encode(token, get_secret_key)[0]["user_id"]
+    JWT.decode(token, get_secret_key)[0]["user_id"]
   end
 
 end
