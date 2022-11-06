@@ -5,6 +5,7 @@ import MusicList from "./components/MusicList"
 import LandingPage from "./components/LandingPage"
 import NavBar from "./components/NavBar"
 import UsersList from "./components/UsersList"
+import ProfilePage from "./components/ProfilePage"
 
 function App() {
 
@@ -28,6 +29,24 @@ function App() {
       .then(musicData => {
         setMusic(musicData)
       })
+  }, [])
+
+  useEffect(() => {
+    let token = localStorage.getItem("token")
+    if (token) {
+      fetch('/profile', {
+        headers: {
+          'token': token,
+          'Content-Type': 'application/json',
+        }
+      })
+        .then(res => res.json())
+        .then(data => {
+          // console.log("already logged in", data)
+          setUser(data)
+          // HERE
+        })
+    }
   }, [])
 
   function handleSignIn(e) {
@@ -86,13 +105,22 @@ function App() {
     alert("Thank you for signing up!")
   }
 
+  function handleLogOut() {
+    localStorage.removeItem('token')
+    window.location.reload()
+  }
+
   return (
     <>
       <Header />
       <NavBar />
+      {/* <ProfilePage user={user} /> */}
       <BrowserRouter>
         <div className="App">
           <Switch>
+            <Route path="/profile">
+              <ProfilePage user={user} handleLogOut={handleLogOut} />
+            </Route>
             <Route path="/music">
               <MusicList music={music} />
             </Route>
@@ -102,6 +130,7 @@ function App() {
             <Route path="/">
               <LandingPage handleSignIn={handleSignIn} addNewUser={addNewUser} friends={friends} />
             </Route>
+
           </Switch>
         </div>
       </BrowserRouter>

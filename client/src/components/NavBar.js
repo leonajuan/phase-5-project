@@ -3,7 +3,7 @@ function NavBar() {
     <div>
       <nav>
         <a href="/">Home</a>
-        <a href="#">My Profile</a>
+        <a href="/profile">My Profile</a>
         <a href="#">Messages</a>
         <a href="/users">Friends</a>
         <a href="/music">Discover</a>
