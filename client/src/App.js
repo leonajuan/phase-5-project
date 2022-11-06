@@ -110,6 +110,23 @@ function App() {
     window.location.reload()
   }
 
+  function deleteUser() {
+    let token = localStorage.getItem('token')
+    if (token) {
+      fetch('/user', {
+        method: 'DELETE',
+        headers: {
+          'token': token,
+          'Content-Type': 'application/json'
+        },
+      })
+      // .then(res => res.json())
+      // .then(deletedUser => {
+      //   console.log(deletedUser)
+      // })
+    }
+  }
+
   return (
     <>
       <Header />
@@ -119,7 +136,7 @@ function App() {
         <div className="App">
           <Switch>
             <Route path="/profile">
-              <ProfilePage user={user} handleLogOut={handleLogOut} />
+              <ProfilePage user={user} handleLogOut={handleLogOut} deleteUser={deleteUser} />
             </Route>
             <Route path="/music">
               <MusicList music={music} />
