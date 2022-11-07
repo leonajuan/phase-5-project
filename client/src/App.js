@@ -110,21 +110,51 @@ function App() {
     window.location.reload()
   }
 
-  function deleteUser() {
+  // function deleteUser() {
+  //   let token = localStorage.getItem('token')
+  //   if (token) {
+  //     fetch('/user', {
+  //       method: 'DELETE',
+  //       headers: {
+  //         'token': token,
+  //         'Content-Type': 'application/json'
+  //       },
+  //     })
+  //     // .then(res => res.json())
+  //     // .then(deletedUser => {
+  //     //   console.log(deletedUser)
+  //     // })
+  //   }
+  // }
+
+  function handleDeleteUser() {
     let token = localStorage.getItem('token')
     if (token) {
-      fetch('/user', {
-        method: 'DELETE',
+      fetch("/user", {
+        method: "DELETE",
         headers: {
-          'token': token,
-          'Content-Type': 'application/json'
+          "token": token,
+          "Content-Type": "application/json"
         },
       })
-      // .then(res => res.json())
-      // .then(deletedUser => {
-      //   console.log(deletedUser)
-      // })
+        .then(res => res.json())
+        .then(deletedUser => {
+          let filteredArray = friends.filter(friend => friend !== deletedUser)
+          setFriends(filteredArray)
+        })
     }
+    // fetch(`http://localhost:9292/reviews/${reviewId}`, {
+    //   method: 'DELETE',
+    //   headers: {
+    //     'Content-Type': 'application/json'
+    //   },
+    // })
+    //   .then(res => res.json())
+    //   .then(deletedReview => {
+    //     let filteredArray = reviews.filter(review => review.id !== deletedReview.id)
+    //     setReviews(filteredArray)
+    //   })
+
   }
 
   return (
@@ -136,7 +166,7 @@ function App() {
         <div className="App">
           <Switch>
             <Route path="/profile">
-              <ProfilePage setUser={setUser} user={user} handleLogOut={handleLogOut} deleteUser={deleteUser} />
+              <ProfilePage setUser={setUser} user={user} handleLogOut={handleLogOut} handleDeleteUser={handleDeleteUser} />
             </Route>
             <Route path="/music">
               <MusicList music={music} />

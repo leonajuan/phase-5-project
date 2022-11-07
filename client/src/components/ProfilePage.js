@@ -1,6 +1,6 @@
 import Swal from 'sweetalert2'
 
-function ProfilePage({ setUser, user, handleLogOut }) {
+function ProfilePage({ setUser, user, handleLogOut, handleDeleteUser }) {
 
   console.log(user)
 
@@ -45,7 +45,7 @@ function ProfilePage({ setUser, user, handleLogOut }) {
       <h3>{user.bio}</h3>
       <button onClick={editBio}>Update Bio</button>
       <button onClick={handleLogOut}>Log Out</button>
-      <button>Delete Account</button>
+      <button onClick={handleDeleteUser}>Delete Account</button>
     </div>
   )
 }
