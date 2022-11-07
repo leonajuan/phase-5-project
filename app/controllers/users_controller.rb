@@ -47,6 +47,18 @@ class UsersController < ApplicationController
     end
   end
 
+  def update_image
+    token = request.headers["token"]
+    user_id = decode_token(token)
+    user = User.find(user_id)
+    if user
+      user.update(image: params[:image])
+      render json: user, status: :ok
+    else
+      render json: { error: "User not found" }, status: :not_found
+    end
+  end
+
   def destroy
     token = request.headers["token"]
     user_id = decode_token(token)

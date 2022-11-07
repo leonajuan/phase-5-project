@@ -4,7 +4,7 @@ function NavBar() {
       <nav>
         <a href="/">Home</a>
         <a href="/profile">My Profile</a>
-        <a href="#">Messages</a>
+        <a href="/messages">Messages</a>
         <a href="/users">Friends</a>
         <a href="/music">Discover</a>
       </nav>

@@ -131,7 +131,7 @@ function App() {
   function handleDeleteUser() {
     let token = localStorage.getItem('token')
     if (token) {
-      fetch("/user", {
+      fetch("/users", {
         method: "DELETE",
         headers: {
           "token": token,
@@ -171,6 +171,8 @@ function App() {
             </Route>
             <Route path="/music">
               <MusicList music={music} />
+            </Route>
+            <Route path="/messages">
             </Route>
             <Route path="/users">
               <UsersList friends={friends} />
