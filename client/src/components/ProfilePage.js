@@ -1,8 +1,11 @@
-import Swal from 'sweetalert2'
+import Swal from "sweetalert2";
+// import { useState } from "react";
 
-function ProfilePage({ setUser, user, handleLogOut, handleDeleteUser }) {
+function ProfilePage({ setUser, user, handleLogOut, handleDeleteUser, login }) {
 
-  console.log(user)
+  // console.log(user)
+
+  // const [login, setLogin] = useState(false)
 
   function editBio() {
     let token = localStorage.getItem('token')
@@ -39,13 +42,23 @@ function ProfilePage({ setUser, user, handleLogOut, handleDeleteUser }) {
 
   return (
     <div>
-      <img src={user.image} alt={user.first_name} />
+      {login ?
+        <div>
+          <img src={user.image} alt={user.first_name} />
+          <h2>Hello, {user.first_name}</h2>
+          <h4>{user.username}</h4>
+          <h3>{user.bio}</h3>
+          <button onClick={editBio}>Update Bio</button>
+          <button onClick={handleLogOut}>Log Out</button>
+          <button onClick={handleDeleteUser}>Delete Account</button>
+        </div> : <h2>Please sign in.</h2>}
+      {/* <img src={user.image} alt={user.first_name} />
       <h1>Hello, {user.first_name}</h1>
       <h4>{user.username}</h4>
       <h3>{user.bio}</h3>
       <button onClick={editBio}>Update Bio</button>
       <button onClick={handleLogOut}>Log Out</button>
-      <button onClick={handleDeleteUser}>Delete Account</button>
+      <button onClick={handleDeleteUser}>Delete Account</button> */}
     </div>
   )
 }

@@ -13,6 +13,7 @@ function App() {
   const [friends, setFriends] = useState([])
   const [user, setUser] = useState({})
   const [filteredUsers, setFilteredUsers] = useState([])
+  const [login, setLogin] = useState(false)
 
   useEffect(() => {
     fetch("/users")
@@ -44,7 +45,7 @@ function App() {
         .then(data => {
           // console.log("already logged in", data)
           setUser(data)
-          // HERE
+          setLogin(true)
         })
     }
   }, [])
@@ -166,7 +167,7 @@ function App() {
         <div className="App">
           <Switch>
             <Route path="/profile">
-              <ProfilePage setUser={setUser} user={user} handleLogOut={handleLogOut} handleDeleteUser={handleDeleteUser} />
+              <ProfilePage setUser={setUser} user={user} handleLogOut={handleLogOut} handleDeleteUser={handleDeleteUser} login={login} />
             </Route>
             <Route path="/music">
               <MusicList music={music} />
