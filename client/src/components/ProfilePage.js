@@ -42,7 +42,7 @@ function ProfilePage({ setUser, user, handleLogOut, handleDeleteUser, login }) {
 
   function updatePhoto(imageSrc) {
     let token = localStorage.getItem('token')
-    fetch("/user-image", {
+    fetch(`/users/${user.id}`, {
       method: "PATCH",
       headers: {
         "token": token,

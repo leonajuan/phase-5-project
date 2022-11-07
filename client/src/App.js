@@ -6,6 +6,7 @@ import LandingPage from "./components/LandingPage"
 import NavBar from "./components/NavBar"
 import UsersList from "./components/UsersList"
 import ProfilePage from "./components/ProfilePage"
+import MessagesList from "./components/MessagesList"
 
 function App() {
 
@@ -45,6 +46,7 @@ function App() {
         .then(data => {
           // console.log("already logged in", data)
           setUser(data)
+          setFilteredUsers(data)
           setLogin(true)
         })
     }
@@ -162,7 +164,6 @@ function App() {
     <>
       <Header />
       <NavBar />
-      {/* <ProfilePage user={user} /> */}
       <BrowserRouter>
         <div className="App">
           <Switch>
@@ -173,6 +174,7 @@ function App() {
               <MusicList music={music} />
             </Route>
             <Route path="/messages">
+              <MessagesList />
             </Route>
             <Route path="/users">
               <UsersList friends={friends} />

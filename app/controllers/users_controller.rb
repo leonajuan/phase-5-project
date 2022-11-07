@@ -47,7 +47,7 @@ class UsersController < ApplicationController
     end
   end
 
-  def update_image
+  def update
     token = request.headers["token"]
     user_id = decode_token(token)
     user = User.find(user_id)
