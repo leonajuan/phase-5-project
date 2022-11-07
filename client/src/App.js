@@ -136,7 +136,7 @@ function App() {
         <div className="App">
           <Switch>
             <Route path="/profile">
-              <ProfilePage user={user} handleLogOut={handleLogOut} deleteUser={deleteUser} />
+              <ProfilePage setUser={setUser} user={user} handleLogOut={handleLogOut} deleteUser={deleteUser} />
             </Route>
             <Route path="/music">
               <MusicList music={music} />

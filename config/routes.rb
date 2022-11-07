@@ -6,5 +6,6 @@ Rails.application.routes.draw do
 
   post "/login", to: "users#login"
   get "/profile", to: "users#profile"
+  patch "/user-bio", to: "users#update_bio"
   # include route of patch - example is: patch "/user-name", to: "users#udpate_name"
 end
