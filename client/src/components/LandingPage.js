@@ -46,12 +46,14 @@ function LandingPage({ handleSignIn, addNewUser, friends }) {
   }
 
   return (
-    <div>
+    <div className="landing-page-div">
       <div>
         <form className="signin-form" onSubmit={handleSignIn}>
           <h1 className="signin-header">Welcome back!</h1>
           <h4 className="signin-subtext">Please sign in below.</h4>
+          <label className="signin-username">Username</label>
           <input className="username" type="text" name="username" placeholder="Username" />
+          <label className="signin-password">Password</label>
           <input className="password" type="text" name="password" placeholder="Password" />
           <button className="signin-button">Sign In</button>
         </form>
