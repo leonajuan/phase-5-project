@@ -74,10 +74,11 @@ function ProfilePage({ setUser, user, handleLogOut, handleDeleteUser, login }) {
     <div>
       {login ?
         <div>
-          <img src={user.image} alt={user.first_name} />
+          <img className="profile-photo" src={user.image} alt={user.first_name} />
           <h2>Hello, {user.first_name}</h2>
-          <h4>{user.username}</h4>
+          <h4>@{user.username}</h4>
           <h3>{user.bio}</h3>
+          <h4>Update Profile Photo:</h4>
           <form onSubmit={handlePhotoUpdate}>
             <input type="file" name="image" accept="image/png, image/gif, image/jpeg" ref={imageRef} />
             <input type="submit" />

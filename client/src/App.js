@@ -124,18 +124,19 @@ function App() {
   function handleDeleteUser() {
     let token = localStorage.getItem('token')
     if (token) {
-      fetch("/users", {
+      fetch(`/users/${user.id}`, {
         method: "DELETE",
         headers: {
           "token": token,
           "Content-Type": "application/json"
-        },
+        }
+          .then(res => res.json())
+          .then(deletedUser => {
+            let filteredArray = friends.filter(friend => friend !== deletedUser)
+            setFriends(filteredArray)
+          })
       })
-        .then(res => res.json())
-        .then(deletedUser => {
-          let filteredArray = friends.filter(friend => friend !== deletedUser)
-          setFriends(filteredArray)
-        })
+
     }
     // fetch(`http://localhost:9292/reviews/${reviewId}`, {
     //   method: 'DELETE',
