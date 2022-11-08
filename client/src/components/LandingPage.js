@@ -49,22 +49,30 @@ function LandingPage({ handleSignIn, addNewUser, friends }) {
     <div>
       <div>
         <form className="signin-form" onSubmit={handleSignIn}>
-          <h1>Sign In</h1>
-          <input type="text" name="username" placeholder="Username" />
-          <input type="text" name="password" placeholder="Password" />
-          <button>Sign In</button>
+          <h1 className="signin-header">Welcome back!</h1>
+          <h4 className="signin-subtext">Please sign in below.</h4>
+          <input className="username" type="text" name="username" placeholder="Username" />
+          <input className="password" type="text" name="password" placeholder="Password" />
+          <button className="signin-button">Sign In</button>
         </form>
       </div>
-      <div>
+      <div className="signup-form-div">
         <form className="signup-form" onSubmit={handleSubmit}>
-          <h1>Sign Up</h1>
-          <input type="text" name="first_name" placeholder="First Name" />
-          <input type="text" name="last_name" placeholder="Last Name" />
-          <input type="text" name="username" placeholder="Username" />
-          <input type="text" name="bio" placeholder="Bio" />
-          <input type="text" name="password" placeholder="Password" />
-          <input type="file" name="image" accept="image/png, image/gif, image/jpeg" ref={imageRef} />
-          <button>Sign Up</button>
+          <h1 className="signup-header">Join Us</h1>
+          <h4 className="signup-subtext">Sign up below.</h4>
+          <label className="first-name">First Name</label>
+          <input className="signup-firstname" type="text" name="first_name" placeholder="First Name" />
+          <label className="last-name">Last Name</label>
+          <input className="signup-lastname" type="text" name="last_name" placeholder="Last Name" />
+          <label className="signup-username-label">Username</label>
+          <input className="signup-username" type="text" name="username" placeholder="Username" />
+          <label className="bio">Bio</label>
+          <input className="signup-bio" type="text" name="bio" placeholder="Bio" />
+          <label className="signup-password-label">Password</label>
+          <input className="signup-password" type="text" name="password" placeholder="Password" />
+          <label className="signup-image-label">Image</label>
+          <input className="signup-image" type="file" name="image" accept="image/png, image/gif, image/jpeg" ref={imageRef} />
+          <button className="signup-button">Sign Up</button>
         </form>
       </div>
     </div>

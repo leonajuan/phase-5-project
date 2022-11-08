@@ -1,3 +1,388 @@
+.header {
+position: absolute;
+width: 192px;
+height: 29px;
+left: 37px;
+top: 34px;
+
+/* font-family: 'Inter'; */
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 29px;
+}
+
+.navbar-home {
+position: absolute;
+width: 48px;
+height: 19px;
+left: 453px;
+top: 48px;
+
+/* font-family: 'Inter'; */
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+}
+
+.navbar-profile {
+position: absolute;
+width: 80px;
+height: 19px;
+left: 643px;
+top: 48px;
+
+/* font-family: 'Inter'; */
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+}
+
+.navbar-messages {
+  position: absolute;
+width: 87px;
+height: 19px;
+left: 825px;
+top: 48px;
+
+/* font-family: 'Inter'; */
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+}
+
+.navbar-friends {
+position: absolute;
+width: 68px;
+height: 19px;
+left: 1042px;
+top: 48px;
+
+/* font-family: 'Inter'; */
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+}
+
+.navbar-discover {
+position: absolute;
+width: 80px;
+height: 19px;
+left: 1260px;
+top: 48px;
+
+/* font-family: 'Inter'; */
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+}
+
+.signin-subtext {
+position: absolute;
+width: 194px;
+height: 24px;
+left: 313px;
+top: 293px;
+
+/* font-family: 'Inter'; */
+font-style: normal;
+font-weight: 300;
+font-size: 20px;
+line-height: 24px;
+}
+
+.signin-header {
+position: absolute;
+text-transform: capitalize;
+width: 345px;
+height: 48px;
+left: 238px;
+top: 210px;
+
+/* font-family: 'Inter'; */
+font-style: normal;
+font-weight: 700;
+font-size: 40px;
+line-height: 48px;
+}
+
+.signup-header {
+  position: absolute;
+  width: 160px;
+  height: 48px;
+  left: 950px;
+  top: 183px;
+  
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  
+  color: #FFFFFF;  
+}
+
+.username {
+box-sizing: border-box;
+
+position: absolute;
+width: 506px;
+height: 64px;
+left: 157px;
+top: 408px;
+
+background: #F0EEEE;
+border: 1px solid #020202;
+}
+
+.password {
+box-sizing: border-box;
+
+position: absolute;
+width: 506px;
+height: 64px;
+left: 157px;
+top: 558px;
+
+background: #F0EEEE;
+border: 1px solid #020202;
+}
+
+.signin-button {
+box-sizing: border-box;
+
+position: absolute;
+width: 453px;
+height: 64px;
+left: 184px;
+top: 708px;
+
+background: #FF327C;
+border-radius: 20px;
+}
+
+.signup-username {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 506px;
+  height: 48px;
+  left: 776px;
+  top: 418px;
+  
+  background: #F0EEEE;
+  border: 1px solid #020202;  
+}
+
+.signup-password {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 506px;
+  height: 48px;
+  left: 776px;
+  top: 530px;
+  
+  background: #F0EEEE;
+  border: 1px solid #020202;  
+}
+
+.signup-bio {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 506px;
+  height: 48px;
+  left: 776px;
+  top: 638px;
+  
+  background: #F0EEEE;
+  border: 1px solid #020202;  
+}
+
+.signup-firstname {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 224px;
+  height: 48px;
+  left: 777px;
+  top: 307px;
+  
+  background: #F0EEEE;
+  border: 1px solid #020202;  
+}
+
+.signup-lastname {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 224px;
+  height: 48px;
+  left: 1058px;
+  top: 307px;
+  
+  background: #F0EEEE;
+  border: 1px solid #020202;    
+}
+
+.signup-image {
+box-sizing: border-box;
+
+position: absolute;
+width: 224px;
+height: 48px;
+left: 778px;
+top: 739px;
+/* 
+background: #F0EEEE;
+border: 1px solid #020202; */
+}
+
+.signup-subtext {
+position: absolute;
+width: 136px;
+height: 24px;
+left: 968px;
+top: 235px;
+
+/* font-family: 'Inter'; */
+font-style: normal;
+font-weight: 300;
+font-size: 20px;
+line-height: 24px;
+}
+
+.signup-button {
+box-sizing: border-box;
+
+position: absolute;
+width: 453px;
+height: 64px;
+left: 802px;
+top: 803px;
+
+background: #F9F0F0;
+border-radius: 20px;
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+}
+
+.first-name {
+position: absolute;
+width: 144px;
+height: 29px;
+left: 777px;
+top: 275px;
+
+/* font-family: 'Inter'; */
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 29px;
+color: #FFFFFF;
+}
+
+.last-name {
+position: absolute;
+width: 139px;
+height: 29px;
+left: 1058px;
+top: 275px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 29px;
+
+color: #FFFFFF;
+}
+
+.signup-username-label {
+position: absolute;
+width: 133px;
+height: 29px;
+left: 776px;
+top: 387px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 29px;
+
+color: #FFFFFF;
+}
+
+.signup-password-label {
+position: absolute;
+width: 134px;
+height: 29px;
+left: 778px;
+top: 499px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 29px;
+
+color: #FFFFFF;
+}
+
+.signup-image-label {
+  position: absolute;
+  width: 76px;
+  height: 29px;
+  left: 776px;
+  top: 708px;
+  
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: #FFFFFF;  
+}
+
+.bio {
+position: absolute;
+width: 152px;
+height: 29px;
+left: 778px;
+top: 607px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 29px;
+
+color: #FFFFFF;
+}
+
+.signup-form {
+position: absolute;
+width: 619px;
+height: 739px;
+left: 720px;
+top: 156px;
+
+background: #FF327C;
+border-radius: 0px 15px 15px 0px;
+}
+
+.signup-form-div {
+z-index: 1;
+}
+
 .profile-photo {
-  max-width: 50%;
+  max-width: 10px;
 }

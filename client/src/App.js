@@ -7,6 +7,7 @@ import NavBar from "./components/NavBar"
 import UsersList from "./components/UsersList"
 import ProfilePage from "./components/ProfilePage"
 import MessagesList from "./components/MessagesList"
+import './App.css';
 
 function App() {
 
