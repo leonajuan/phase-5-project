@@ -6,8 +6,11 @@ function LandingPage({ handleSignIn, addNewUser, friends }) {
   const imageRef = useRef(null)
 
   function handleSignUp(e, imageSrc) {
-    const firstName = e.target["first-name"].value
-    const lastName = e.target["last-name"].value
+
+    console.log(e.target)
+
+    const firstName = e.target["first_name"].value
+    const lastName = e.target["last_name"].value
     const username = e.target["username"].value
     const bio = e.target["bio"].value
     const password = e.target["password"].value
@@ -36,7 +39,7 @@ function LandingPage({ handleSignIn, addNewUser, friends }) {
     let reader = new FileReader();
     reader.onload = () => {
       if (reader.readyState === 2) {
-        handleSignUp(reader.result)
+        handleSignUp(e, reader.result)
       }
     }
     reader.readAsDataURL(imageRef.current.files[0])
@@ -55,8 +58,8 @@ function LandingPage({ handleSignIn, addNewUser, friends }) {
       <div>
         <form className="signup-form" onSubmit={handleSubmit}>
           <h1>Sign Up</h1>
-          <input type="text" name="first-name" placeholder="First Name" />
-          <input type="text" name="last-name" placeholder="Last Name" />
+          <input type="text" name="first_name" placeholder="First Name" />
+          <input type="text" name="last_name" placeholder="Last Name" />
           <input type="text" name="username" placeholder="Username" />
           <input type="text" name="bio" placeholder="Bio" />
           <input type="text" name="password" placeholder="Password" />

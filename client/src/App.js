@@ -10,7 +10,6 @@ import MessagesList from "./components/MessagesList"
 
 function App() {
 
-  const [music, setMusic] = useState([])
   const [friends, setFriends] = useState([])
   const [user, setUser] = useState({})
   const [filteredUsers, setFilteredUsers] = useState([])
@@ -22,14 +21,6 @@ function App() {
       .then(userData => {
         setFriends(userData)
         setFilteredUsers(userData)
-      })
-  }, [])
-
-  useEffect(() => {
-    fetch("/musics")
-      .then(res => res.json())
-      .then(musicData => {
-        setMusic(musicData)
       })
   }, [])
 
@@ -171,7 +162,7 @@ function App() {
               <ProfilePage setUser={setUser} user={user} handleLogOut={handleLogOut} handleDeleteUser={handleDeleteUser} login={login} />
             </Route>
             <Route path="/music">
-              <MusicList music={music} />
+              <MusicList />
             </Route>
             <Route path="/messages">
               <MessagesList />
@@ -182,7 +173,6 @@ function App() {
             <Route path="/">
               <LandingPage handleSignIn={handleSignIn} addNewUser={addNewUser} friends={friends} />
             </Route>
-
           </Switch>
         </div>
       </BrowserRouter>

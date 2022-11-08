@@ -52,7 +52,7 @@ class UsersController < ApplicationController
     user_id = decode_token(token)
     user = User.find(user_id)
     if user
-      user.update(image: params[:image])
+      user.update!(image: params[:image])
       render json: user, status: :ok
     else
       render json: { error: "User not found" }, status: :not_found
