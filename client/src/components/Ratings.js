@@ -1,7 +1,7 @@
 function Ratings({ rating }) {
   return (
     <>
-      <p>Rating: {rating.rating}</p>
+      <p>Rating: {rating.show_star_ratings}</p>
       <p>{rating.comment}</p>
     </>
   )
