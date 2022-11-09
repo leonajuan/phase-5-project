@@ -86,7 +86,7 @@ function ProfilePage({ setUser, user, handleLogOut, handleDeleteUser, login }) {
           <button onClick={editBio}>Update Bio</button>
           <button onClick={handleLogOut}>Log Out</button>
           <button onClick={handleDeleteUser}>Delete Account</button>
-        </div> : <h2>Please sign in.</h2>}
+        </div> : <h2 className="logged-out-message">Please sign in.</h2>}
     </div>
   )
 }

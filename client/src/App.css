@@ -423,6 +423,27 @@ border-radius: 0px 15px 15px 0px;
 z-index: 1;
 }
 
+.logged-out-message {
+  position: absolute;
+  height: 29px;
+  left: 576px;
+  top: 508px;
+}
+
 .profile-photo {
   max-width: 10px;
+}
+
+.chatroom-label {
+  position: absolute;
+  height: 29px;
+  left: 576px;
+  top: 508px;
+}
+
+.chatroom {
+  position: absolute;
+  height: 29px;
+  left: 576px;
+  top: 565px;
 }

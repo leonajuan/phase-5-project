@@ -7,6 +7,7 @@ import NavBar from "./components/NavBar"
 import UsersList from "./components/UsersList"
 import ProfilePage from "./components/ProfilePage"
 import MessagesList from "./components/MessagesList"
+import ChatRoom from "./components/ChatRoom"
 import './App.css';
 
 function App() {
@@ -167,6 +168,7 @@ function App() {
               <MusicList />
             </Route>
             <Route path="/messages">
+              <ChatRoom />
               <MessagesList />
             </Route>
             <Route path="/users">
