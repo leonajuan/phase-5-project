@@ -1,11 +1,13 @@
 import Swal from "sweetalert2";
-import { useRef } from "react";
+import { useState, useRef } from "react";
+import ChatRoom from "../components/ChatRoom"
 
 // import { useState } from "react";
 
 function ProfilePage({ setUser, user, handleLogOut, handleDeleteUser, login }) {
 
   const imageRef = useRef(null)
+  const [chatOpen, setChatOpen] = useState(null)
 
   function editBio() {
     let token = localStorage.getItem('token')
@@ -86,6 +88,8 @@ function ProfilePage({ setUser, user, handleLogOut, handleDeleteUser, login }) {
           <button onClick={editBio}>Update Bio</button>
           <button onClick={handleLogOut}>Log Out</button>
           <button onClick={handleDeleteUser}>Delete Account</button>
+          <button type="button" onClick={() => setChatOpen(prev => !prev)}>{chatOpen ? "Close Chat" : "Open Chat"}</button>
+          {chatOpen ? <ChatRoom user={user} /> : null}
         </div> : <h2 className="logged-out-message">Please sign in.</h2>}
     </div>
   )

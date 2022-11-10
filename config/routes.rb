@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :ratings, only: [:index, :show, :create]
   resources :musics, only: [:index, :show, :create]
   resources :users
+  mount ActionCable.server => '/cable'
 
   post "/login", to: "users#login"
   get "/profile", to: "users#profile"

@@ -168,7 +168,7 @@ function App() {
               <MusicList />
             </Route>
             <Route path="/messages">
-              <ChatRoom />
+              {/* <ChatRoom /> */}
               <MessagesList />
             </Route>
             <Route path="/users">
