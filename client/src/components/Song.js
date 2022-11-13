@@ -18,7 +18,7 @@ function Song({ song, ratings, user }) {
       <h3>{song.artist}</h3>
       <h4>{song.album}</h4>
       <button onClick={handleRatingFormPreview}>Add a New Rating</button>
-      {openRatingForm ? <NewRatingForm user={user} /> : null}
+      {openRatingForm ? <NewRatingForm user={user} song={song} /> : null}
       {showRatings ? <RatingsList ratings={ratings} id={song.id} /> : null}
     </div>
   )
