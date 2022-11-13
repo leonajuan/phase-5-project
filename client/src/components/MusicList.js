@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Song from "../components/Song"
 
-function MusicList() {
+function MusicList({ user }) {
 
   const [music, setMusic] = useState([])
   const [ratings, setRatings] = useState([])
@@ -23,7 +23,7 @@ function MusicList() {
   }, [])
 
   const songComponents = music.map(song => {
-    return <Song key={song.id} song={song} ratings={ratings} />
+    return <Song key={song.id} song={song} ratings={ratings} user={user} />
   })
 
   return (

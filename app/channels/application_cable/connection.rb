@@ -1,6 +1,7 @@
 module ApplicationCable
   class Connection < ActionCable::Connection::Base
   include ApplicationHelper
+  
     identified_by :current_user
 
     def connect

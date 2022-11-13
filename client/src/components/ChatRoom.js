@@ -5,8 +5,8 @@ const consumer = createConsumer("http://localhost:3000/cable?token=" + localStor
 function ChatRoom({ user }) {
 
   const [messages, setMessages] = useState([])
-  const [channel, setChannel] = useState("")
-  const [messageInput, setMessageInput] = useState([])
+  const [channel, setChannel] = useState(null)
+  const [messageInput, setMessageInput] = useState("")
 
   useEffect(() => {
     console.log(consumer)
@@ -18,11 +18,10 @@ function ChatRoom({ user }) {
         },
         received: (data) => {
           console.log(data)
-          // setMessages(oldMessages => [...oldMessages, data])
+          setMessages(oldMessages => [...oldMessages, data])
         }
       })
     console.log('Channel', newChannel)
-
     setChannel(newChannel)
   }, [])
 
@@ -32,13 +31,14 @@ function ChatRoom({ user }) {
 
   function handleSubmit(e) {
     e.preventDefault()
-    console.log("---Something happens here---")
+    channel.send({ content: messageInput })
     setMessageInput("")
   }
 
   return (
     <div>
       <h3 className="chatroom-label">Chat Room:</h3>
+      {messages.map((message, i) => <p key={i}>{message.content}</p>)}
       <form className="chatroom" onSubmit={handleSubmit}>
         <input type="text" placeholder="Type your message here..." value={messageInput} onChange={handleMessageInputChange} />
         <button>Send Message</button>

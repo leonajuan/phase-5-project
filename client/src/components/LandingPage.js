@@ -54,7 +54,7 @@ function LandingPage({ handleSignIn, addNewUser, friends }) {
           <label className="signin-username">Username</label>
           <input className="username" type="text" name="username" placeholder="Username" />
           <label className="signin-password">Password</label>
-          <input className="password" type="text" name="password" placeholder="Password" />
+          <input className="password" type="password" name="password" placeholder="Password" />
           <button className="signin-button">Sign In</button>
         </form>
       </div>

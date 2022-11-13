@@ -7,7 +7,7 @@ import NavBar from "./components/NavBar"
 import UsersList from "./components/UsersList"
 import ProfilePage from "./components/ProfilePage"
 import MessagesList from "./components/MessagesList"
-import ChatRoom from "./components/ChatRoom"
+// import ChatRoom from "./components/ChatRoom"
 import './App.css';
 
 function App() {
@@ -165,7 +165,7 @@ function App() {
               <ProfilePage setUser={setUser} user={user} handleLogOut={handleLogOut} handleDeleteUser={handleDeleteUser} login={login} />
             </Route>
             <Route path="/music">
-              <MusicList />
+              <MusicList user={user} />
             </Route>
             <Route path="/messages">
               {/* <ChatRoom /> */}
