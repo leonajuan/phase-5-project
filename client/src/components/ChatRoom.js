@@ -10,7 +10,6 @@ function ChatRoom({ user }) {
 
   useEffect(() => {
     console.log(consumer)
-    // consumer.subscriptions.create({ channel: "ChatChannel", room: "Test Room" })
     const newChannel = consumer.subscriptions.create({ channel: "ChatChannel", room: "Test Room" },
       {
         initialized: () => {

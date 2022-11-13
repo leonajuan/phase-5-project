@@ -1,4 +1,3 @@
-import { render } from "@testing-library/react";
 import { useRef } from "react";
 
 function LandingPage({ handleSignIn, addNewUser, friends }) {
@@ -14,7 +13,6 @@ function LandingPage({ handleSignIn, addNewUser, friends }) {
     const username = e.target["username"].value
     const bio = e.target["bio"].value
     const password = e.target["password"].value
-    // const image = e.target["image"].value
     fetch("/users", {
       method: "POST",
       headers: {

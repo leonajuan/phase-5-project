@@ -7,7 +7,6 @@ import NavBar from "./components/NavBar"
 import UsersList from "./components/UsersList"
 import ProfilePage from "./components/ProfilePage"
 import MessagesList from "./components/MessagesList"
-// import ChatRoom from "./components/ChatRoom"
 import './App.css';
 
 function App() {
@@ -37,7 +36,6 @@ function App() {
       })
         .then(res => res.json())
         .then(data => {
-          // console.log("already logged in", data)
           setUser(data)
           setFilteredUsers(data)
           setLogin(true)
@@ -68,33 +66,6 @@ function App() {
       })
   }
 
-  // function handleSignUp(e) {
-  //   e.preventDefault()
-  //   const firstName = e.target["first-name"].value
-  //   const lastName = e.target["last-name"].value
-  //   const username = e.target["username"].value
-  //   const bio = e.target["bio"].value
-  //   const password = e.target["password"].value
-  //   const image = e.target["image"].value
-  //   fetch("/users", {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json"
-  //     },
-  //     body: JSON.stringify({
-  //       id: friends.length + 1,
-  //       first_name: firstName,
-  //       last_name: lastName,
-  //       username: username,
-  //       bio: bio,
-  //       password: password,
-  //       image: image
-  //     }),
-  //   })
-  //     .then(res => res.json())
-  //     .then(newUser => addNewUser(newUser))
-  // }
-
   function addNewUser(newUser) {
     const updatedUsersArray = [...friends, newUser]
     setFilteredUsers(updatedUsersArray)
@@ -105,23 +76,6 @@ function App() {
     localStorage.removeItem('token')
     window.location.reload()
   }
-
-  // function deleteUser() {
-  //   let token = localStorage.getItem('token')
-  //   if (token) {
-  //     fetch('/user', {
-  //       method: 'DELETE',
-  //       headers: {
-  //         'token': token,
-  //         'Content-Type': 'application/json'
-  //       },
-  //     })
-  //     // .then(res => res.json())
-  //     // .then(deletedUser => {
-  //     //   console.log(deletedUser)
-  //     // })
-  //   }
-  // }
 
   function handleDeleteUser() {
     let token = localStorage.getItem('token')
@@ -140,18 +94,6 @@ function App() {
       })
 
     }
-    // fetch(`http://localhost:9292/reviews/${reviewId}`, {
-    //   method: 'DELETE',
-    //   headers: {
-    //     'Content-Type': 'application/json'
-    //   },
-    // })
-    //   .then(res => res.json())
-    //   .then(deletedReview => {
-    //     let filteredArray = reviews.filter(review => review.id !== deletedReview.id)
-    //     setReviews(filteredArray)
-    //   })
-
   }
 
   return (
@@ -168,7 +110,6 @@ function App() {
               <MusicList user={user} />
             </Route>
             <Route path="/messages">
-              {/* <ChatRoom /> */}
               <MessagesList />
             </Route>
             <Route path="/users">
