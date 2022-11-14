@@ -1,6 +1,6 @@
 import { useRef } from "react";
 
-function LandingPage({ handleSignIn, addNewUser, friends }) {
+function LandingPage({ user, handleSignIn, addNewUser, friends, login, handleLogOut }) {
 
   const imageRef = useRef(null)
 
@@ -45,36 +45,43 @@ function LandingPage({ handleSignIn, addNewUser, friends }) {
 
   return (
     <div className="landing-page-div">
-      <div>
-        <form className="signin-form" onSubmit={handleSignIn}>
-          <h1 className="signin-header">Welcome back!</h1>
-          <h4 className="signin-subtext">Please sign in below.</h4>
-          <label className="signin-username">Username</label>
-          <input className="username" type="text" name="username" placeholder="Username" />
-          <label className="signin-password">Password</label>
-          <input className="password" type="password" name="password" placeholder="Password" />
-          <button className="signin-button">Sign In</button>
-        </form>
-      </div>
-      <div className="signup-form-div">
-        <form className="signup-form" onSubmit={handleSubmit}>
-          <h1 className="signup-header">Join Us</h1>
-          <h4 className="signup-subtext">Sign up below.</h4>
-          <label className="first-name">First Name</label>
-          <input className="signup-firstname" type="text" name="first_name" placeholder="First Name" />
-          <label className="last-name">Last Name</label>
-          <input className="signup-lastname" type="text" name="last_name" placeholder="Last Name" />
-          <label className="signup-username-label">Username</label>
-          <input className="signup-username" type="text" name="username" placeholder="Username" />
-          <label className="bio">Bio</label>
-          <input className="signup-bio" type="text" name="bio" placeholder="Bio" />
-          <label className="signup-password-label">Password</label>
-          <input className="signup-password" type="text" name="password" placeholder="Password" />
-          <label className="signup-image-label">Image</label>
-          <input className="signup-image" type="file" name="image" accept="image/png, image/gif, image/jpeg" ref={imageRef} />
-          <button className="signup-button">Sign Up</button>
-        </form>
-      </div>
+      {login ?
+        <>
+          <h2> Hello, {user.first_name}!</h2>
+          <h4>Welcome back.</h4>
+          <button onClick={handleLogOut}>Log Out</button>
+        </> : <> <div>
+          <form className="signin-form" onSubmit={handleSignIn}>
+            <h1 className="signin-header">Welcome back!</h1>
+            <h4 className="signin-subtext">Please sign in below.</h4>
+            <label className="signin-username">Username</label>
+            <input className="username" type="text" name="username" placeholder="Username" />
+            <label className="signin-password">Password</label>
+            <input className="password" type="password" name="password" placeholder="Password" />
+            <button className="signin-button">Sign In</button>
+          </form>
+        </div>
+          <div className="signup-form-div">
+            <form className="signup-form" onSubmit={handleSubmit}>
+              <h1 className="signup-header">Join Us</h1>
+              <h4 className="signup-subtext">Sign up below.</h4>
+              <label className="first-name">First Name</label>
+              <input className="signup-firstname" type="text" name="first_name" placeholder="First Name" />
+              <label className="last-name">Last Name</label>
+              <input className="signup-lastname" type="text" name="last_name" placeholder="Last Name" />
+              <label className="signup-username-label">Username</label>
+              <input className="signup-username" type="text" name="username" placeholder="Username" />
+              <label className="bio">Bio</label>
+              <input className="signup-bio" type="text" name="bio" placeholder="Bio" />
+              <label className="signup-password-label">Password</label>
+              <input className="signup-password" type="text" name="password" placeholder="Password" />
+              <label className="signup-image-label">Image</label>
+              <input className="signup-image" type="file" name="image" accept="image/png, image/gif, image/jpeg" ref={imageRef} />
+              <button className="signup-button">Sign Up</button>
+            </form>
+          </div>
+        </>
+      }
     </div>
   )
 }

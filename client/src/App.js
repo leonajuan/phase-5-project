@@ -62,7 +62,7 @@ function App() {
       .then(data => {
         setUser(data.user)
         localStorage.setItem("token", data.token)
-        // alert("You're logged in!")
+        setLogin(true)
       })
   }
 
@@ -116,7 +116,7 @@ function App() {
               <UsersList friends={friends} />
             </Route>
             <Route path="/">
-              <LandingPage handleSignIn={handleSignIn} addNewUser={addNewUser} friends={friends} />
+              <LandingPage handleSignIn={handleSignIn} addNewUser={addNewUser} friends={filteredUsers} login={login} user={user} handleLogOut={handleLogOut} />
             </Route>
           </Switch>
         </div>
