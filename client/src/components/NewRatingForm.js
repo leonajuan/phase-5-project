@@ -5,7 +5,8 @@ function NewRatingForm({ user, song }) {
     let token = localStorage.getItem('token')
     const rating = e.target["rating"].value
     const comment = e.target["comment"].value
-    if (user) {
+    // console.log(user)
+    if (user["username"] !== undefined) {
       fetch("/ratings", {
         method: "POST",
         headers: {
@@ -33,12 +34,12 @@ function NewRatingForm({ user, song }) {
   return (
     <div>
       <h2>Add a New Rating</h2>
-      <form>
-        <label for="rating">Rating</label>
+      <form onSubmit={handleNewRating}>
+        <label>Rating</label>
         <input type="number" name="rating" min="1" max="5" step="1" />
-        <label for="comment">Thoughts</label>
+        <label>Thoughts</label>
         <input type="text" name="comment" placeholder="Add your comments here..." />
-        <button onSubmit={handleNewRating}>Submit</button>
+        <button>Submit</button>
       </form>
     </div>
   )
