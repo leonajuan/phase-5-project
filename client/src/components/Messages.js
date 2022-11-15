@@ -1,4 +1,4 @@
-import User from "./User";
+// import Friend from "./Friend";
 
 function Messages({ message }) {
 

@@ -1,4 +1,9 @@
-function NewRatingForm({ user, song }) {
+import { useContext } from "react";
+import UserContext from "../components/UserContext";
+
+function NewRatingForm({ song }) {
+
+  const { user, setUser } = useContext(UserContext)
 
   function handleNewRating(e) {
     e.preventDefault()

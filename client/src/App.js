@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Header from "./components/Header"
-import MusicList from "./components/MusicList"
-import LandingPage from "./components/LandingPage"
-import NavBar from "./components/NavBar"
-import UsersList from "./components/UsersList"
-import ProfilePage from "./components/ProfilePage"
-import MessagesList from "./components/MessagesList"
+import UserContext from './components/UserContext';
+import Header from "./components/Header";
+import MusicList from "./components/MusicList";
+import LandingPage from "./components/LandingPage";
+import NavBar from "./components/NavBar";
+import UsersList from "./components/UsersList";
+import ProfilePage from "./components/ProfilePage";
+import MessagesList from "./components/MessagesList";
 import './App.css';
 
 function App() {
@@ -118,25 +119,27 @@ function App() {
       <Header />
       <NavBar />
       <BrowserRouter>
-        <div className="App">
-          <Switch>
-            <Route path="/profile">
-              <ProfilePage setUser={setUser} user={user} handleLogOut={handleLogOut} handleDeleteUser={handleDeleteUser} login={login} />
-            </Route>
-            <Route path="/music">
-              <MusicList user={user} />
-            </Route>
-            <Route path="/messages">
-              <MessagesList />
-            </Route>
-            <Route path="/users">
-              <UsersList friends={friends} />
-            </Route>
-            <Route path="/">
-              <LandingPage handleSignIn={handleSignIn} addNewUser={addNewUser} friends={filteredUsers} login={login} user={user} handleLogOut={handleLogOut} />
-            </Route>
-          </Switch>
-        </div>
+        <UserContext.Provider value={{ user, setUser }}>
+          <div className="App">
+            <Switch>
+              <Route path="/profile">
+                <ProfilePage handleLogOut={handleLogOut} handleDeleteUser={handleDeleteUser} login={login} />
+              </Route>
+              <Route path="/music">
+                <MusicList />
+              </Route>
+              <Route path="/messages">
+                <MessagesList />
+              </Route>
+              <Route path="/users">
+                <UsersList friends={friends} />
+              </Route>
+              <Route path="/">
+                <LandingPage handleSignIn={handleSignIn} addNewUser={addNewUser} friends={filteredUsers} login={login} handleLogOut={handleLogOut} />
+              </Route>
+            </Switch>
+          </div>
+        </UserContext.Provider>
       </BrowserRouter>
     </>
   );

@@ -1,13 +1,16 @@
 import Swal from "sweetalert2";
-import { useState, useRef } from "react";
+import { useState, useContext, useRef } from "react";
+import UserContext from "../components/UserContext";
 import ChatRoom from "../components/ChatRoom"
 
 // import { useState } from "react";
 
-function ProfilePage({ setUser, user, handleLogOut, handleDeleteUser, login }) {
+function ProfilePage({ handleLogOut, handleDeleteUser, login }) {
 
   const imageRef = useRef(null)
   const [chatOpen, setChatOpen] = useState(null)
+
+  const { user, setUser } = useContext(UserContext)
 
   function editBio() {
     let token = localStorage.getItem('token')

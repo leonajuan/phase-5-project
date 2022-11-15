@@ -1,8 +1,11 @@
-import { useRef } from "react";
+import { useContext, useRef } from "react";
+import UserContext from "../components/UserContext";
 
-function LandingPage({ user, handleSignIn, addNewUser, friends, login, handleLogOut }) {
+function LandingPage({ handleSignIn, addNewUser, friends, login, handleLogOut }) {
 
   const imageRef = useRef(null)
+
+  const { user, setUser } = useContext(UserContext)
 
   function handleSignUp(e, imageSrc) {
 

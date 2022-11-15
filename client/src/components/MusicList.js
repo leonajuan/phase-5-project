@@ -1,10 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState, useContext, useEffect } from "react";
+import UserContext from "../components/UserContext"
 import Song from "../components/Song"
 
-function MusicList({ user }) {
+function MusicList() {
 
   const [music, setMusic] = useState([])
   const [ratings, setRatings] = useState([])
+
+  const { user, setUser } = useContext(UserContext)
 
   useEffect(() => {
     fetch("/musics")

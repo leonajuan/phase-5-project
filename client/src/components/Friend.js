@@ -1,4 +1,4 @@
-function User({ friend }) {
+function Friend({ friend }) {
   return (
     <div>
       <h1>{friend.first_name}</h1>
@@ -9,4 +9,4 @@ function User({ friend }) {
   )
 }
 
-export default User;
+export default Friend;
