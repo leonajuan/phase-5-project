@@ -49,6 +49,7 @@ function LandingPage({ user, handleSignIn, addNewUser, friends, login, handleLog
         <>
           <h2> Hello, {user.first_name}!</h2>
           <h4>Welcome back.</h4>
+          <a href="/profile">Head to Your Profile</a>
           <button onClick={handleLogOut}>Log Out</button>
         </> : <> <div>
           <form className="signin-form" onSubmit={handleSignIn}>
