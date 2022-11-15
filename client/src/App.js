@@ -77,22 +77,39 @@ function App() {
     window.location.reload()
   }
 
+  // function handleDeleteUser() {
+  //   let token = localStorage.getItem('token')
+  //   if (token) {
+  //     fetch(`/users/${user.id}`, {
+  //       method: "DELETE",
+  //       headers: {
+  //         "token": token,
+  //         "Content-Type": "application/json"
+  //       }
+  //     })
+  //       .then(res => res.json())
+  //       .then(deletedUser => {
+  //         console.log(deletedUser)
+  //         // let filteredArray = friends.filter(friend => friend !== deletedUser)
+  //         // setFriends(filteredArray)
+  //       })
+  //   }
+  // }
+
   function handleDeleteUser() {
-    let token = localStorage.getItem('token')
+    let token = localStorage.getItem("token")
     if (token) {
       fetch(`/users/${user.id}`, {
         method: "DELETE",
         headers: {
           "token": token,
           "Content-Type": "application/json"
-        }
-          .then(res => res.json())
-          .then(deletedUser => {
-            let filteredArray = friends.filter(friend => friend !== deletedUser)
-            setFriends(filteredArray)
-          })
+        },
       })
-
+        .then(res => res.json())
+        .then(deletedUser => {
+          console.log(deletedUser)
+        })
     }
   }
 
