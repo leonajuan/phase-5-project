@@ -1,7 +1,7 @@
 import Swal from "sweetalert2";
 import { useState, useContext, useRef } from "react";
 import UserContext from "../components/UserContext";
-import ChatRoom from "../components/ChatRoom"
+import ChatRoom from "../components/ChatRoom";
 
 // import { useState } from "react";
 

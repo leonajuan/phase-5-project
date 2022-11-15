@@ -1,6 +1,6 @@
 import { useState, useContext, useEffect } from "react";
-import UserContext from "../components/UserContext"
-import Song from "../components/Song"
+import UserContext from "../components/UserContext";
+import Song from "../components/Song";
 
 function MusicList() {
 

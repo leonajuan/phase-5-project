@@ -74,7 +74,7 @@ function App() {
   }
 
   function handleLogOut() {
-    localStorage.removeItem('token')
+    localStorage.clear()
     window.location.reload()
   }
 
@@ -109,7 +109,7 @@ function App() {
       })
         .then(res => res.json())
         .then(deletedUser => {
-          console.log(deletedUser)
+          handleLogOut()
         })
     }
   }

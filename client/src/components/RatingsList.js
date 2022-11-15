@@ -1,4 +1,4 @@
-import Ratings from "../components/Ratings"
+import Ratings from "../components/Ratings";
 
 function RatingsList({ ratings, id }) {
 
