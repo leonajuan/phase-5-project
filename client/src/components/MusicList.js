@@ -25,8 +25,13 @@ function MusicList() {
       })
   }, [])
 
+  function addNewRating(newRating) {
+    const updatedRatingsArray = [...ratings, newRating]
+    setRatings(updatedRatingsArray)
+  }
+
   const songComponents = music.map(song => {
-    return <Song key={song.id} song={song} ratings={ratings} user={user} />
+    return <Song key={song.id} song={song} ratings={ratings} user={user} addNewRating={addNewRating} />
   })
 
   return (

@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import UserContext from "../components/UserContext";
 
-function NewRatingForm({ song }) {
+function NewRatingForm({ song, addNewRating }) {
 
   const { user, setUser } = useContext(UserContext)
 
@@ -28,7 +28,7 @@ function NewRatingForm({ song }) {
       })
         .then(res => res.json())
         .then(newRating => {
-          console.log(newRating)
+          addNewRating(newRating)
         })
     }
     else {
