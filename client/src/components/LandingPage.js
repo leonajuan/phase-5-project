@@ -54,8 +54,8 @@ function LandingPage({ handleSignIn, addNewUser, friends, login, handleLogOut })
           <h4>Welcome back.</h4>
           <a href="/profile">Head to Your Profile</a>
           <button onClick={handleLogOut}>Log Out</button>
-        </> : <> <div>
-          <form className="signin-form" onSubmit={handleSignIn}>
+        </> : <div className="langing-div"> <div className="signin-div">
+          <form onSubmit={handleSignIn}>
             <h1 className="signin-header">Welcome back!</h1>
             <h4 className="signin-subtext">Please sign in below.</h4>
             <label className="signin-username">Username</label>
@@ -75,16 +75,16 @@ function LandingPage({ handleSignIn, addNewUser, friends, login, handleLogOut })
               <input className="signup-lastname" type="text" name="last_name" placeholder="Last Name" />
               <label className="signup-username-label">Username</label>
               <input className="signup-username" type="text" name="username" placeholder="Username" />
+              <label className="signup-password-label">Password</label>
+              <input className="signup-password" type="password" name="password" placeholder="Password" />
               <label className="bio">Bio</label>
               <input className="signup-bio" type="text" name="bio" placeholder="Bio" />
-              <label className="signup-password-label">Password</label>
-              <input className="signup-password" type="text" name="password" placeholder="Password" />
               <label className="signup-image-label">Image</label>
               <input className="signup-image" type="file" name="image" accept="image/png, image/gif, image/jpeg" ref={imageRef} />
               <button className="signup-button">Sign Up</button>
             </form>
           </div>
-        </>
+        </div>
       }
     </div>
   )

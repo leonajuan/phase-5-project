@@ -149,11 +149,13 @@ color: #000000;
 
 .signup-header {
   position: absolute;
+  text-align: center;
+  
   text-transform: uppercase;
   width: 160px;
   height: 48px;
-  left: 950px;
-  top: 183px;
+  left: 225px;
+  top: 23px; 
   
   /* font-family: 'Inter'; */
   font-style: normal;
@@ -212,21 +214,21 @@ line-height: 44px;
   position: absolute;
   width: 506px;
   height: 48px;
-  left: 776px;
-  top: 418px;
+  left: 50px;
+  top: 258px; 
   
   background: #F0EEEE;
   border: 1px solid #020202;  
 }
 
 .signup-password {
-  box-sizing: border-box;
+ box-sizing: border-box;
 
   position: absolute;
   width: 506px;
   height: 48px;
-  left: 776px;
-  top: 530px;
+  left: 50px;
+  top: 358px;
   
   background: #F0EEEE;
   border: 1px solid #020202;  
@@ -238,8 +240,8 @@ line-height: 44px;
   position: absolute;
   width: 506px;
   height: 48px;
-  left: 776px;
-  top: 638px;
+  left: 50px;
+  top: 458px;
   
   background: #F0EEEE;
   border: 1px solid #020202;  
@@ -247,12 +249,12 @@ line-height: 44px;
 
 .signup-firstname {
   box-sizing: border-box;
-
+ 
   position: absolute;
   width: 224px;
   height: 48px;
-  left: 777px;
-  top: 307px;
+  left: 48px;
+  top: 158px;
   
   background: #F0EEEE;
   border: 1px solid #020202;  
@@ -261,11 +263,11 @@ line-height: 44px;
 .signup-lastname {
   box-sizing: border-box;
 
-  position: absolute;
+   position: absolute;
   width: 224px;
   height: 48px;
-  left: 1058px;
-  top: 307px;
+  left: 331px;
+  top: 158px;
   
   background: #F0EEEE;
   border: 1px solid #020202;    
@@ -277,8 +279,8 @@ box-sizing: border-box;
 position: absolute;
 width: 224px;
 height: 48px;
-left: 778px;
-top: 739px;
+left: 48px;
+top: 558px;
 /* 
 background: #F0EEEE;
 border: 1px solid #020202; */
@@ -288,12 +290,12 @@ border: 1px solid #020202; */
 position: absolute;
 width: 136px;
 height: 24px;
-left: 968px;
-top: 235px;
+left: 248px;
+top: 70px;
 
 /* font-family: 'Inter'; */
 font-style: normal;
-font-weight: 300;
+font-weight: 400;
 font-size: 20px;
 line-height: 24px;
 }
@@ -304,22 +306,23 @@ box-sizing: border-box;
 position: absolute;
 width: 453px;
 height: 64px;
-left: 802px;
-top: 803px;
+left: 88px;
+top: 628px;
 
 background: #F9F0F0;
 border-radius: 20px;
 font-style: normal;
 font-weight: 700;
 font-size: 36px;
+text-transform: uppercase;
 }
 
 .first-name {
 position: absolute;
 width: 144px;
 height: 29px;
-left: 777px;
-top: 275px;
+left: 48px;
+top: 125px;
 
 /* font-family: 'Inter'; */
 font-style: normal;
@@ -333,8 +336,8 @@ color: #FFFFFF;
 position: absolute;
 width: 139px;
 height: 29px;
-left: 1058px;
-top: 275px;
+left: 330px;
+top: 125px;
 
 /* font-family: 'Inter'; */
 font-style: normal;
@@ -349,8 +352,8 @@ color: #FFFFFF;
 position: absolute;
 width: 133px;
 height: 29px;
-left: 776px;
-top: 387px;
+left: 48px;
+top: 225px;
 
 /* font-family: 'Inter'; */
 font-style: normal;
@@ -365,8 +368,8 @@ color: #FFFFFF;
 position: absolute;
 width: 134px;
 height: 29px;
-left: 778px;
-top: 499px;
+left: 48px;
+top: 325px;
 
 /* font-family: 'Inter'; */
 font-style: normal;
@@ -381,8 +384,8 @@ color: #FFFFFF;
   position: absolute;
   width: 76px;
   height: 29px;
-  left: 776px;
-  top: 708px;
+  left: 48px;
+  top: 525px;
   
   /* font-family: 'Inter'; */
   font-style: normal;
@@ -396,8 +399,8 @@ color: #FFFFFF;
 position: absolute;
 width: 152px;
 height: 29px;
-left: 778px;
-top: 607px;
+left: 48px;
+top: 425px;
 
 /* font-family: 'Inter'; */
 font-style: normal;
@@ -408,7 +411,7 @@ line-height: 29px;
 color: #FFFFFF;
 }
 
-.signup-form {
+/* .signup-form {
 position: absolute;
 width: 619px;
 height: 739px;
@@ -416,11 +419,23 @@ left: 720px;
 top: 156px;
 
 background: #FF327C;
-border-radius: 0px 15px 15px 0px;
-}
+border-radius: 0px 15px 15px 0px; 
+} */
 
 .signup-form-div {
-z-index: 1;
+  position: absolute;
+  width: 619px;
+  height: 739px;
+  left: 720px;
+  top: 156px;
+  
+  background: #FF327C;
+  border-radius: 0px 15px 15px 0px;
+}
+
+.signin-div {
+  background:  #F9F0F0;
+  border-radius: 0px 15px 15px
 }
 
 .logged-out-message {
@@ -430,6 +445,10 @@ z-index: 1;
   top: 508px;
 }
 
+.landing-page-div {
+  margin: auto;
+  background: #F9F0F0;
+}
 /* #profile-div {
 position: absolute;
 width: 277px;
