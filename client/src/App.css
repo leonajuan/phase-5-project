@@ -430,15 +430,155 @@ z-index: 1;
   top: 508px;
 }
 
-.profile-photo {
-  max-width: 10px;
+/* #profile-div {
+position: absolute;
+width: 277px;
+height: 631px;
+left: 38px;
+top: 356px;
+
+background: #F9F6F6;
+border-radius: 5px;
+} */
+
+#profile-photo {
+position: absolute;
+width: 226px;
+height: 226px;
+left: 62px;
+top: 117px;
+}
+
+#profile-name {
+position: absolute;
+width: 208px;
+height: 39px;
+left: 70px;
+top: 379px;
+
+/* font-family: 'Inter'; */
+font-style: normal;
+font-weight: 800;
+font-size: 32px;
+line-height: 39px;
+text-transform: uppercase;
+}
+
+#profile-username {
+position: absolute;
+width: 99px;
+height: 22px;
+left: 125px;
+top: 435px;
+
+/* font-family: 'Inter'; */
+font-style: italic;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+}
+
+#profile-bio {
+position: absolute;
+width: 187px;
+height: 15px;
+left: 83px;
+top: 475px;
+
+/* font-family: 'Inter'; */
+font-style: normal;
+font-weight: 400;
+font-size: 17px;
+line-height: 21px;
+text-align: center;
+}
+
+#photo-update-label {
+position: absolute;
+width: 187px;
+height: 23px;
+left: 81px;
+top: 684px;
+
+/* font-family: 'Inter'; */
+font-style: italic;
+font-weight: 200;
+font-size: 19px;
+line-height: 23px;
+
+}
+
+#profile-photo-update {
+position: absolute;
+width: 228px;
+height: 45px;
+left: 62px;
+top: 720px;
+
+background: #E8D5D2;
+border-radius: 10px;
+}
+
+#update-bio-button {
+position: absolute;
+width: 228px;
+height: 45px;
+left: 62px;
+top: 593px;
+
+background: #FF327C;
+border-radius: 10px;
+/* font-family: 'Inter'; */
+font-style: normal;
+font-weight: 900;
+font-size: 20px;
+line-height: 24px;
+text-transform: uppercase;
+
+color: #FFFFFF;
+}
+
+#logout-button {
+position: absolute;
+width: 228px;
+height: 45px;
+left: 62px;
+top: 811px;
+
+background: #000000;
+border-radius: 10px;
+font-style: normal;
+font-weight: 900;
+font-size: 20px;
+line-height: 24px;
+text-transform: uppercase;
+
+color: #FFFFFF
+}
+
+#delete-button {
+position: absolute;
+width: 228px;
+height: 45px;
+left: 62px;
+top: 902px;
+font-style: normal;
+font-weight: 900;
+font-size: 20px;
+line-height: 24px;
+text-transform: uppercase;
+
+color: #FFFFFF;
+
+background: #D8D0D0;
+border-radius: 10px;
 }
 
 .chatroom-label {
-  position: absolute;
-  height: 29px;
-  left: 576px;
-  top: 508px;
+position: absolute;
+height: 29px;
+left: 576px;
+top: 508px;
 }
 
 .chatroom {

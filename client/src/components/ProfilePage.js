@@ -78,21 +78,21 @@ function ProfilePage({ handleLogOut, handleDeleteUser, login }) {
   return (
     <div>
       {login ?
-        <div>
-          <img className="profile-photo" src={user.image} alt={user.first_name} />
-          <h2>Hello, {user.first_name}</h2>
-          <h4>@{user.username}</h4>
-          <h3>{user.bio}</h3>
-          <h4>Update Profile Photo:</h4>
-          <form onSubmit={handlePhotoUpdate}>
+        <div id="profile-div">
+          <img id="profile-photo" src={user.image} alt={user.first_name} />
+          <h1 id="profile-name">{user.first_name} {user.last_name}</h1>
+          <h4 id="profile-username">@{user.username}</h4>
+          <h3 id="profile-bio">{user.bio}</h3>
+          <h4 id="photo-update-label">Update Profile Photo:</h4>
+          <form onSubmit={handlePhotoUpdate} id="profile-photo-update">
             <input type="file" name="image" accept="image/png, image/gif, image/jpeg" ref={imageRef} />
             <input type="submit" />
           </form>
-          <button onClick={editBio}>Update Bio</button>
-          <button onClick={handleLogOut}>Log Out</button>
-          <button onClick={handleDeleteUser}>Delete Account</button>
-          <button type="button" onClick={() => setChatOpen(prev => !prev)}>{chatOpen ? "Close Chat" : "Open Chat"}</button>
-          {chatOpen ? <ChatRoom user={user} /> : null}
+          <button id="update-bio-button" onClick={editBio}>Update Bio</button>
+          <button id="logout-button" onClick={handleLogOut}>Log Out</button>
+          <button id="delete-button" onClick={handleDeleteUser}>Delete Account</button>
+          {/* <button type="button" onClick={() => setChatOpen(prev => !prev)}>{chatOpen ? "Close Chat" : "Open Chat"}</button>
+          {chatOpen ? <ChatRoom user={user} /> : null} */}
         </div> : <h2 className="logged-out-message">Please sign in.</h2>}
     </div>
   )
