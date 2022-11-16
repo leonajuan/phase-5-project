@@ -16,11 +16,11 @@ function Song({ song, ratings, addNewRating }) {
 
   return (
     <div className="song-card">
-      <h1>{song.song_title}</h1>
       <img src={song.album_cover} alt={song.song_title} onClick={() => setShowRatings(!showRatings)} />
-      <h3>{song.artist}</h3>
-      <h4>{song.album}</h4>
-      <button onClick={handleRatingFormPreview}>Add a New Rating</button>
+      <h1 className="song-info">{song.song_title}</h1>
+      <h3 className="song-info">{song.artist}</h3>
+      <h4 className="song-info" id="song-album">{song.album}</h4>
+      <button id="rating-button" onClick={handleRatingFormPreview}>Add a New Rating</button>
       {openRatingForm ? <NewRatingForm user={user} song={song} addNewRating={addNewRating} /> : null}
       {showRatings ? <RatingsList ratings={ratings} id={song.id} /> : null}
     </div>

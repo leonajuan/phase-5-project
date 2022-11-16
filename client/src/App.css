@@ -613,14 +613,15 @@ button {
 }
 
 .song-card {
-  margin: 1rem;
+  margin-left: auto;
+  margin-right: auto;
   transition: 0.3s;
   padding-left: 5px;
   padding-right: 5px;
-  margin: 15px 10px 5px 10px;
+  margin: 0px -5px 0px 0px;
   width: 70%;
   /* box-shadow: 0 1px 2px 0 rgb(60 64 67 / 15%), 0 2px 6px 2px rgb(60 64 67 / 15%); */
-  padding: 1rem;
+  padding-top: 20px;
   border-radius: 10px;
 }
 
@@ -628,7 +629,18 @@ button {
   object-fit: cover;
   height: 300px;
   width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
   border-radius: 20px;
+}
+
+.song-card h3 {
+  font-weight: 300;
+}
+
+.song-card h1 {
+  font-weight: 700;
 }
 
 .song-card img:hover {
@@ -656,4 +668,31 @@ button {
   .song-card {
     width: calc(20% - 2rem);
   }
+}
+
+.song-info {
+  position: relative;
+  text-align: center;
+}
+
+#rating-button {
+  width: 170px;
+  height: 30px;
+  height: 30px;
+  background:  #D9D9D9;
+
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  border: none;
+  text-align: center;
+  padding-left: auto;
+  padding-right: auto;
+}
+
+.song-cards {
+  margin-top: 150px;
+  margin-left: 30px;
 }
