@@ -18,7 +18,7 @@ function MessagesList() {
   })
 
   return (
-    <div>
+    <div className="messages-div">
       {messageComponents}
     </div>
   )

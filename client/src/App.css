@@ -45,9 +45,9 @@ line-height: 19px;
 .navbar-messages {
 position: absolute;
 text-transform: uppercase;
-width: 87px;
+width: 117px;
 height: 19px;
-left: 825px;
+left: 855px;
 top: 48px;
 
 /* font-family: 'Inter'; */
@@ -62,7 +62,7 @@ position: absolute;
 text-transform: uppercase;
 width: 68px;
 height: 19px;
-left: 1042px;
+left: 1082px;
 top: 48px;
 
 /* font-family: 'Inter'; */
@@ -77,7 +77,7 @@ position: absolute;
 text-transform: uppercase;
 width: 80px;
 height: 19px;
-left: 1260px;
+left: 1280px;
 top: 48px;
 
 /* font-family: 'Inter'; */
@@ -618,7 +618,7 @@ button {
   transition: 0.3s;
   padding-left: 5px;
   padding-right: 5px;
-  margin: 0px -5px 0px 0px;
+  margin: 20px 0px 20px 0px;
   width: 70%;
   /* box-shadow: 0 1px 2px 0 rgb(60 64 67 / 15%), 0 2px 6px 2px rgb(60 64 67 / 15%); */
   padding-top: 20px;
@@ -636,11 +636,16 @@ button {
 }
 
 .song-card h3 {
-  font-weight: 300;
+  font-weight: 350;
 }
 
 .song-card h1 {
   font-weight: 700;
+}
+
+.song-card h4 {
+  font-weight: 250;
+  font-style: italic; 
 }
 
 .song-card img:hover {
@@ -693,6 +698,15 @@ button {
 }
 
 .song-cards {
+  margin-top: 120px;
+  /* margin-left: 30px; */
+  background-color: #F9F0F0;
+}
+
+.messages-div {
   margin-top: 150px;
-  margin-left: 30px;
+}
+
+.messages-list {
+  list-style: none;
 }

@@ -4,8 +4,12 @@ function Messages({ message }) {
 
   return (
     <div>
-      <h3>{message.message}</h3>
-      <p>from {message.user.first_name}</p>
+      <ul className="messages-list">
+        <li id="message-username">from @{message.user.username}</li>
+        <li id="message-content">{message.message}</li>
+      </ul>
+      {/* <h3>{message.message}</h3>
+      <p>from @{message.user.username}</p> */}
     </div>
   )
 }
