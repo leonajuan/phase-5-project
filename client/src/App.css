@@ -445,7 +445,7 @@ border-radius: 0px 15px 15px 0px;
   top: 508px;
 }
 
-.landing-page-div {
+.landing-div {
   margin: auto;
   background: #F9F0F0;
 }
@@ -462,6 +462,7 @@ border-radius: 5px;
 
 #profile-photo {
 position: absolute;
+border-radius: 50%;
 width: 226px;
 height: 226px;
 left: 62px;
