@@ -607,3 +607,53 @@ top: 508px;
   left: 576px;
   top: 565px;
 }
+
+button {
+  cursor: pointer;
+}
+
+.song-card {
+  margin: 1rem;
+  transition: 0.3s;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 15px 10px 5px 10px;
+  width: 70%;
+  /* box-shadow: 0 1px 2px 0 rgb(60 64 67 / 15%), 0 2px 6px 2px rgb(60 64 67 / 15%); */
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.song-card img {
+  object-fit: cover;
+  height: 300px;
+  width: 300px;
+  border-radius: 20px;
+}
+
+.song-card img:hover {
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .song-cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .song-card {
+    width: calc(33% - 2rem);
+  }
+}
+
+@media (min-width: 1024px) {
+  .song-card {
+    width: calc(25% - 2rem);
+  }
+}
+
+@media (min-width: 1200px) {
+  .song-card {
+    width: calc(20% - 2rem);
+  }
+}

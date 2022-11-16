@@ -35,7 +35,7 @@ function MusicList() {
   })
 
   return (
-    <div>
+    <div className="song-cards">
       {songComponents}
     </div>
   )
