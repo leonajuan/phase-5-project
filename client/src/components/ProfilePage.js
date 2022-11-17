@@ -1,14 +1,12 @@
 import Swal from "sweetalert2";
 import { useState, useContext, useRef } from "react";
 import UserContext from "../components/UserContext";
-import ChatRoom from "../components/ChatRoom";
-
-// import { useState } from "react";
+// import ChatRoom from "../components/ChatRoom";
 
 function ProfilePage({ handleLogOut, handleDeleteUser, login }) {
 
   const imageRef = useRef(null)
-  const [chatOpen, setChatOpen] = useState(null)
+  // const [chatOpen, setChatOpen] = useState(null)
 
   const { user, setUser } = useContext(UserContext)
 
@@ -88,12 +86,14 @@ function ProfilePage({ handleLogOut, handleDeleteUser, login }) {
             <input type="file" name="image" accept="image/png, image/gif, image/jpeg" ref={imageRef} />
             <input type="submit" />
           </form>
-          <button id="update-bio-button" onClick={editBio}>Update Bio</button>
-          <button id="logout-button" onClick={handleLogOut}>Log Out</button>
-          <button id="delete-button" onClick={handleDeleteUser}>Delete Account</button>
-          <div>
+          <button id="update-bio-button" className="profile-buttons" onClick={editBio}>Update Bio</button>
+          <button id="logout-button" className="profile-buttons" onClick={handleLogOut}>Log Out</button>
+          <button id="delete-button" className="profile-buttons" onClick={handleDeleteUser}>Delete Account</button>
+          <div className="ProfilePage-headings">
             <h2>My Top Rated Songs:</h2>
-            <h4>{user.ratings[0].comment}</h4>
+            <h4>{user.ratings[0].music_id}</h4>
+            <h4>{user.ratings[0].show_star_ratings}</h4>
+            <h4 >{user.ratings[0].comment}</h4>
           </div>
           {/* <button type="button" onClick={() => setChatOpen(prev => !prev)}>{chatOpen ? "Close Chat" : "Open Chat"}</button>
           {chatOpen ? <ChatRoom user={user} /> : null} */}

@@ -8,4 +8,8 @@ class User < ApplicationRecord
   validates :username, presence: true, uniqueness: true
   validates :password_digest, presence: true
   
+  def song_ratings
+    self.ratings&.map(&:music)
+  end
+  
 end

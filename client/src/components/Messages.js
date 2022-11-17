@@ -5,7 +5,7 @@ function Messages({ message }) {
   return (
     <div>
       <ul className="messages-list">
-        <img src={message.user.image} />
+        <img id="message-image" src={message.user.image} />
         <li id="message-username">from @{message.user.username}</li>
         <li id="message-content">{message.message}</li>
       </ul>

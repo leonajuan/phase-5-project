@@ -18,9 +18,12 @@ function MessagesList() {
   })
 
   return (
-    <div className="messages-div">
-      {messageComponents}
-    </div>
+    <>
+      <h1 id="messages-header">Let's Get Social</h1>
+      <div className="messages-div">
+        {messageComponents}
+      </div>
+    </>
   )
 }
 

@@ -49,14 +49,14 @@ function LandingPage({ handleSignIn, addNewUser, friends, login, handleLogOut })
   return (
     <div className="landing-page-div">
       {login ?
-        <>
+        <div className="Welcome-landing">
           <h1 id="welcome-message"> Hello, {user.first_name}!</h1>
           <h4 id="welcome-greeting">Welcome back.</h4>
           <a id="profile-link" href="/profile">Head to Your Profile</a>
           <br />
           <br />
           <button id="welcome-logout-button" onClick={handleLogOut}>Log Out</button>
-        </> : <div className="landing-div"> <div className="signin-div">
+        </div> : <div className="landing-div"> <div className="signin-div">
           <form onSubmit={handleSignIn}>
             <h1 className="signin-header">Welcome back!</h1>
             <h4 className="signin-subtext">Please sign in below.</h4>
