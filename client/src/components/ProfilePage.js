@@ -89,12 +89,12 @@ function ProfilePage({ handleLogOut, handleDeleteUser, login }) {
           <button id="update-bio-button" className="profile-buttons" onClick={editBio}>Update Bio</button>
           <button id="logout-button" className="profile-buttons" onClick={handleLogOut}>Log Out</button>
           <button id="delete-button" className="profile-buttons" onClick={handleDeleteUser}>Delete Account</button>
-          <div className="ProfilePage-headings">
+          {/* <div className="ProfilePage-headings">
             <h2>My Top Rated Songs:</h2>
             <h4>{user.ratings[0].music_id}</h4>
             <h4>{user.ratings[0].show_star_ratings}</h4>
             <h4 >{user.ratings[0].comment}</h4>
-          </div>
+          </div> */}
           {/* <button type="button" onClick={() => setChatOpen(prev => !prev)}>{chatOpen ? "Close Chat" : "Open Chat"}</button>
           {chatOpen ? <ChatRoom user={user} /> : null} */}
         </div> : <h2 className="logged-out-message">Please sign in.</h2>}

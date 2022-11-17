@@ -4,12 +4,12 @@ position: absolute;
 width: 192px;
 height: 29px;
 left: 37px;
-top: 34px;
+top: 20px;
 
 /* font-family: 'Inter'; */
 font-style: normal;
 font-weight: 400;
-font-size: 24px;
+font-size: 36px;
 line-height: 29px;
 }
 
@@ -18,14 +18,15 @@ position: absolute;
 text-transform: uppercase;
 width: 48px;
 height: 19px;
-left: 453px;
+left: 353px;
 top: 48px;
 
 /* font-family: 'Inter'; */
 font-style: normal;
-font-weight: 400;
+font-weight: 500;
 font-size: 16px;
 line-height: 19px;
+color: #FF327C;
 }
 
 .navbar-profile {
@@ -33,29 +34,31 @@ position: absolute;
 text-transform: uppercase;
 width: 100px;
 height: 19px;
-left: 643px;
+left: 553px;
 top: 48px;
 
 /* font-family: 'Inter'; */
 font-style: normal;
-font-weight: 400;
+font-weight: 500;
 font-size: 16px;
 line-height: 19px;
+color: #FF327C;
 }
 
 .navbar-messages {
 position: absolute;
 text-transform: uppercase;
-width: 117px;
+width: 127px;
 height: 19px;
-left: 855px;
+left: 773px;
 top: 48px;
 
 /* font-family: 'Inter'; */
 font-style: normal;
-font-weight: 400;
+font-weight: 500;
 font-size: 16px;
 line-height: 19px;
+color: #FF327C;
 }
 
 .navbar-friends {
@@ -63,14 +66,15 @@ position: absolute;
 text-transform: uppercase;
 width: 68px;
 height: 19px;
-left: 1082px;
+left: 1033px;
 top: 48px;
 
 /* font-family: 'Inter'; */
 font-style: normal;
-font-weight: 400;
+font-weight: 500;
 font-size: 16px;
 line-height: 19px;
+color: #FF327C;
 }
 
 .navbar-discover {
@@ -78,14 +82,35 @@ position: absolute;
 text-transform: uppercase;
 width: 80px;
 height: 19px;
-left: 1280px;
+left: 1253px;
 top: 48px;
 
 /* font-family: 'Inter'; */
 font-style: normal;
-font-weight: 400;
+font-weight: 500;
 font-size: 16px;
 line-height: 19px;
+color: #FF327C;
+}
+
+.navbar-home:hover {
+  color: black;
+}
+
+.navbar-profile:hover {
+  color: black;
+}
+
+.navbar-messages:hover {
+  color: black;
+}
+
+.navbar-friends:hover {
+  color: black;
+}
+
+.navbar-discover:hover {
+  color: black;
 }
 
 .signin-subtext {
@@ -792,22 +817,41 @@ button {
 }
 
 #welcome-message {
-  margin-top: 120px;
+  margin-top: 10px;
   text-align: center;
 }
 
 #welcome-greeting {
   text-align: center;
+  font-size: 24px;
+  padding-top: 0px;
 }
 
 #profile-link {
   margin-left: auto;
   margin-right: auto;
+  color: black;
+}
+
+#profile-link:hover {
+  color:  #FF327C;
 }
 
 #welcome-logout-button {
-  margin-left: auto;
-  margin-right: auto;
+margin-left: auto;
+margin-right: auto;
+
+background: #FF327C;
+border-radius: 10px;
+/* font-family: 'Inter'; */
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+width: 150px;
+/* line-height: 24px; */
+text-transform: uppercase;
+
+color: #FFFFFF;
 }
 
 .profile-buttons {
@@ -827,4 +871,41 @@ button {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  background-color:#E8D5D2;
+  margin-top: 100px;
+}
+
+.friends-div {
+  margin-top: 7.5%;
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.friend-card {
+  transition: 0.3s all ease;
+}
+
+@media (min-width: 768px) {
+  .friends-div {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .friend-card {
+    width: calc(33% - 2rem);
+  }
+}
+
+@media (min-width: 1024px) {
+  .friend-card {
+    width: calc(25% - 2rem);
+  }
+}
+
+@media (min-width: 1200px) {
+  .friend-card {
+    width: calc(20% - 2rem);
+  }
 }

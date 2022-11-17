@@ -7,7 +7,7 @@ function UsersList({ friends }) {
   })
 
   return (
-    <div style={{ marginTop: '7.5%', display: 'flex', gap: '10px' }}>
+    <div className="friends-div">
       {friendComponents}
     </div>
   )
