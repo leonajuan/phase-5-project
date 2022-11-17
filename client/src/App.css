@@ -627,8 +627,8 @@ button {
 
 .song-card img {
   object-fit: cover;
-  height: 300px;
-  width: 300px;
+  height: 200px;
+  width: 200px;
   margin-left: auto;
   margin-right: auto;
   display: block;
@@ -636,16 +636,19 @@ button {
 }
 
 .song-card h3 {
-  font-weight: 350;
+  font-weight: 270;
+  font-size: 20px;
 }
 
 .song-card h1 {
   font-weight: 700;
+  font-size: 24px;
 }
 
 .song-card h4 {
   font-weight: 250;
   font-style: italic; 
+  font-size: 15px;
 }
 
 .song-card img:hover {
@@ -698,7 +701,7 @@ button {
 }
 
 .song-cards {
-  margin-top: 120px;
+  margin-top: 10px;
   /* margin-left: 30px; */
   background-color: #F9F0F0;
 }
@@ -709,4 +712,45 @@ button {
 
 .messages-list {
   list-style: none;
+  padding-bottom: 15px;
+}
+
+.messages-list img {
+  object-fit: cover;
+  width: 85px;
+  height: 85px;
+  border-radius: 50%
+}
+
+#message-username {
+  font-size: 13px;
+}
+
+#message-content {
+  font-size: 20px;
+}
+
+.discover-header {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 40px;
+}
+
+#welcome-message {
+  margin-top: 120px;
+  text-align: center;
+}
+
+#welcome-greeting {
+  text-align: center;
+}
+
+#profile-link {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#welcome-logout-button {
+  margin-left: auto;
+  margin-right: auto;
 }

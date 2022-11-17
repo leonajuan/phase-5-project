@@ -35,9 +35,14 @@ function MusicList() {
   })
 
   return (
-    <div className="song-cards">
-      {songComponents}
-    </div>
+    <>
+      <div>
+        <h1 className="discover-header">DISCOVER WHAT'S IN OUR QUEUE</h1>
+      </div>
+      <div className="song-cards">
+        {songComponents}
+      </div>
+    </>
   )
 }
 
