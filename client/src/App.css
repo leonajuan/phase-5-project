@@ -1,7 +1,7 @@
 
 .header {
 position: absolute;
-width: 192px;
+width: 230px;
 height: 29px;
 left: 37px;
 top: 20px;
@@ -48,7 +48,7 @@ color: #FF327C;
 .navbar-messages {
 position: absolute;
 text-transform: uppercase;
-width: 127px;
+width: 100px;
 height: 19px;
 left: 773px;
 top: 48px;
@@ -66,7 +66,7 @@ position: absolute;
 text-transform: uppercase;
 width: 68px;
 height: 19px;
-left: 1033px;
+left: 1003px;
 top: 48px;
 
 /* font-family: 'Inter'; */
@@ -466,10 +466,9 @@ border-radius: 0px 15px 15px 0px;
 }
 
 .logged-out-message {
-  position: absolute;
-  height: 29px;
-  left: 576px;
-  top: 508px;
+  text-align: center;
+  margin-top: 400px;
+  font-size: 48px;
 }
 
 .landing-div {
@@ -478,7 +477,8 @@ border-radius: 0px 15px 15px 0px;
 
 #profile-div {
   height: 100vh;
-  padding-left: 5rem;
+  background-color: #F9F6F6;
+  /* padding-left: 5rem; */
 }
 
 /* #profile-div {
@@ -498,9 +498,9 @@ border-radius: 50%;
 object-fit: cover;
 width: 230px;
 height: 230px;
-margin-left: auto;
-margin-right: auto;
-margin-top: 5px;
+margin-left: 500px;
+margin-right: 500px;
+margin-top: 100px;
 
 /* left: 62px;
 top: 117px; */
@@ -511,7 +511,9 @@ position: absolute;
 width: 300px;
 height: 39px;
 margin-top: 50px;
-text-align: center;
+margin-left: 515px;
+margin-right: 515px;
+/* text-align: center; */
 /* left: 70px;
 top: 379px; */
 
@@ -528,6 +530,9 @@ position: absolute;
 width: 300px;
 height: 22px;
 margin-top: 100px;
+margin-left: 590px;
+margin-right: 600px;
+/* text-align: center; */
 
 /* left: 125px;
 top: 435px; */
@@ -543,7 +548,10 @@ line-height: 22px;
 position: absolute;
 width: 300px;
 height: 15px;
-margin-top: 175px;
+margin-top: 145px;
+margin-left: 525px;
+margin-right: 525px;
+/* text-align: center; */
 /* left: 83px;
 top: 475px; */
 
@@ -567,14 +575,17 @@ font-style: italic;
 font-weight: 200;
 font-size: 19px;
 line-height: 23px;
-margin-top: 275px;
+margin-top: 200px;
+margin-left: 525px;
+margin-right: 525px;
 }
 
 #profile-photo-update {
 position: absolute;
-width: 228px;
+width: 310px;
 height: 45px;
-margin-top: 38vh;
+margin-top: 230px;
+margin-left: 515px;
 /* left: 62px;
 top: 720px; */
 
@@ -585,12 +596,7 @@ top: 720px; */
   margin-top: 15vh;
   
 }
-.ProfilePage-headings h2{
-  /* border: 1px solid red; */
-}
-.ProfilePage-headings h4{
-  /* border: 1px solid red; */
-}
+
 #update-bio-button {
 /* position: absolute; */
 width: 228px;
@@ -789,6 +795,7 @@ button {
   margin-left: 5px;
   margin-bottom: 5px;
   background: white;
+  box-shadow: 0 1px 2px 0 rgb(60 64 67 / 15%), 0 2px 6px 2px rgb(60 64 67 / 15%);
 }
 /* 
 #message-image {
@@ -855,11 +862,12 @@ color: #FFFFFF;
 }
 
 .profile-buttons {
-  margin-left: auto;
-  margin-right: auto;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 100px;
+  margin-right: 100px;
   margin-top: 300px;
+  /* margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 300px; */
 }
 
 *{
@@ -877,14 +885,19 @@ color: #FFFFFF;
 
 .friends-div {
   margin-top: 7.5%;
+  padding-bottom: 30px;
   display: flex;
   gap: 10px;
   flex-direction: row;
   justify-content: center;
+  background-color:#F9F0F0;
 }
 
 .friend-card {
   transition: 0.3s all ease;
+  margin-top: 30px;
+  background: white;
+  box-shadow: 0 1px 2px 0 rgb(60 64 67 / 15%), 0 2px 6px 2px rgb(60 64 67 / 15%);
 }
 
 @media (min-width: 768px) {
@@ -908,4 +921,28 @@ color: #FFFFFF;
   .friend-card {
     width: calc(20% - 2rem);
   }
+}
+
+.signin-link {
+  color: black;
+}
+
+.signin-link:hover {
+  color: #FF327C;
+}
+
+.song-photo {
+  box-shadow: 0 2px 3px 0 rgb(60 64 67 / 15%), 0 2px 6px 2px rgb(60 64 67 / 15%);
+}
+
+.rating-card {
+  border: 0.5px black solid;
+  list-style: none;
+  border-radius: 5px;
+  padding: 5px 5px 5px 5px;
+  margin-top: 10px;
+}
+
+.rating-comment {
+  font-size: 14px;
 }

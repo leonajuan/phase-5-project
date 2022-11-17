@@ -16,7 +16,7 @@ function Song({ song, ratings, addNewRating }) {
 
   return (
     <div className="song-card">
-      <img src={song.album_cover} alt={song.song_title} onClick={() => setShowRatings(!showRatings)} />
+      <img className="song-photo" src={song.album_cover} alt={song.song_title} onClick={() => setShowRatings(!showRatings)} />
       <div>
 
         <h1 className="song-info">{song.song_title}</h1>

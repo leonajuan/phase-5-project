@@ -97,7 +97,7 @@ function ProfilePage({ handleLogOut, handleDeleteUser, login }) {
           </div> */}
           {/* <button type="button" onClick={() => setChatOpen(prev => !prev)}>{chatOpen ? "Close Chat" : "Open Chat"}</button>
           {chatOpen ? <ChatRoom user={user} /> : null} */}
-        </div> : <h2 className="logged-out-message">Please sign in.</h2>}
+        </div> : <h2 className="logged-out-message">Oops, please <a className="signin-link" href="/">sign in</a>!</h2>}
     </div>
   )
 }

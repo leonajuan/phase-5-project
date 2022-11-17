@@ -1,6 +1,6 @@
 function Header() {
   return (
-    <h1 className="header">AUX CORD</h1>
+    <h1 className="header">♬ AUX CORD</h1>
   )
 }
 

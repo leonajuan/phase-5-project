@@ -1,10 +1,10 @@
 function Ratings({ rating }) {
   return (
-    <>
-      <p>@{rating.user.username} said:</p>
-      <p>Rating: {rating.show_star_ratings}</p>
-      <p>{rating.comment}</p>
-    </>
+    <div className="rating-card">
+      <li className="rating-username">@{rating.user.username} said:</li>
+      <li className="rating-rating">Rating: {rating.show_star_ratings}</li>
+      <li className="rating-comment">{rating.comment}</li>
+    </div>
   )
 }
 
